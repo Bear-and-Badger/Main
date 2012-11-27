@@ -1,0 +1,5 @@
+.UserNetworksContainer { margin: 7px 0 0; }
+.UserNetworksContainer .UserNetworks { display: none; margin: 5px 0;}
+.UserNetworksContainer .UserNetworkShow { display: block; }
+.UserNetworksContainer dt { font-weight: bold; color: #333; }
+.UserNetworksContainer dd { color: #666; }
