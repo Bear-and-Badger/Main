@@ -37,7 +37,7 @@ class AllViewedPlugin extends Gdn_Plugin {
       $Session = Gdn::Session();
       if ($Sender->Menu && $Session->IsValid()) {
          // Comment out this next line if you want to put the link somewhere else manually
-         $Sender->Menu->AddLink('AllViewed', T('Mark All Viewed'), '/discussions/markallviewed');
+         $Sender->Menu->AddLink('AllViewed', T('Mark All Viewed'), '/discussions/markallviewed', FALSE, array('class' => 'Popup'));
       }
    }
    
@@ -154,9 +154,13 @@ class AllViewedPlugin extends Gdn_Plugin {
     * @access public
     */
    public function DiscussionsController_MarkAllViewed_Create($Sender) {
-      $UserModel = Gdn::UserModel();
-      $UserModel->UpdateAllViewed();
-      Redirect('discussions');
+      if ($_POST["confirm"]) {
+        $UserModel = Gdn::UserModel();
+        $UserModel->UpdateAllViewed();
+        Redirect('discussions');
+      } else {
+        $Sender->Render($this->GetView('allviewed.php'));
+      }
    }
    
    /**

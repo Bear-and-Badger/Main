@@ -48,7 +48,8 @@ $Editing = isset($this->Comment);
    }
 
    echo Gdn_Theme::Link('forumroot', $CancelText, NULL, array(
-       'class' => $CancelClass
+       'class' => $CancelClass,
+       'tabindex' => '-1'
    ));
    
    $ButtonOptions = array('class' => 'Button CommentButton');

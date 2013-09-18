@@ -11,7 +11,7 @@ Contact Vanilla Forums Inc. at support [at] vanillaforums [dot] com
 /**
  * Builds a pager control related to a dataset.
  */
-class PagerModule extends Gdn_Module {
+class MobilePagerModule extends Gdn_Module {
 
    /**
     * The id applied to the div tag that contains the pager.
@@ -114,8 +114,8 @@ class PagerModule extends Gdn_Module {
       $this->TotalRecords = FALSE;
       $this->Wrapper = '<div class="P"><div %1$s>%2$s</div></div>';
       $this->PagerEmpty = '';
-      $this->MoreCode = 'Next ›';
-      $this->LessCode = '‹ Previous';
+      $this->MoreCode = 'Next&nbsp;';
+      $this->LessCode = '&nbsp;Prev';
       $this->Url = '/controller/action/$s/';
       $this->_PropertiesDefined = FALSE;
       $this->_Totalled = FALSE;
@@ -228,7 +228,7 @@ class PagerModule extends Gdn_Module {
       $CurrentPage = ceil($this->Offset / $this->Limit) + 1;
 
       // Show $Range pages on either side of current
-      $Range = C('Garden.Modules.PagerRange', 3);
+      $Range = C('Garden.Modules.PagerRange', 2);
       
       // String to represent skipped pages
       $Separator = C('Garden.Modules.PagerSeparator', '&#8230;');

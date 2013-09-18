@@ -1,4 +1,5 @@
 jQuery(document).ready(function($) {
+    $('li.Popup a').popup();
    // Map plain text category to url code
    $("#Form_Name").keyup(function(event) {
       if ($('#Form_CodeIsDefined').val() == '0') {

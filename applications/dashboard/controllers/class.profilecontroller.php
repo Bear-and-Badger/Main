@@ -367,6 +367,17 @@ class ProfileController extends Gdn_Controller {
       Gdn_CookieIdentity::SetCookie('VanillaNoMobile', $KeyData, array($UserID, $Expiration, 'force'), $Expire);
       Redirect("/", 302);
    }
+
+   /**
+    * Set 'Mobile' cookie for current user to enable use of mobile theme.
+    *
+    * @since 2.0.?
+    * @access public
+    */
+   public function Mobile() {
+      Gdn_CookieIdentity::DeleteCookie('VanillaNoMobile');
+      Redirect("/", 302);
+   }
    
    /**
     * Show notifications for current user.

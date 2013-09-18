@@ -1,7 +1,8 @@
 jQuery(document).ready(function($) {
    
 /* Comment Form */
-
+    
+    
    if ($.autogrow)
       $('textarea.TextBox').livequery(function() {
          $(this).autogrow();
@@ -394,4 +395,6 @@ jQuery(document).ready(function($) {
          }
       });
    });
+
+   $('li.Popup a').popup();
 });

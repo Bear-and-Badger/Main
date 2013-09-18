@@ -1,0 +1,6 @@
+
+.Ignored .Message { display: none; }
+.Show .Message { display: block; }
+
+.ignore-user { color: #990134; font-weight: bold; }
+.ignore-button button { color: #990134; padding: 0; margin: 0; border: 0; background: none; font-size: 11px; font-family: verdana; cursor: pointer;}
