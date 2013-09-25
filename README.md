@@ -26,8 +26,8 @@ This will by and large be the definitive source, so as I roll out improvements t
 If you wish to run this yourself, you will need a webserver, PHP and MySQL. Apache is preferred due to the use of
 .htaccess files for pretty URLs, but it's up to you.
 
-You'll need to add DB config settings into the /conf/config file - I have no idea how nicely this will play if you
-don't already have a Vanilla database installation setup, but if you find a way of making life easier then let me know.
+You'll need to add DB config settings into the /conf/config file. A seed SQL file can be found in /DB/db_seed.sql - I would recommend installing Vanilla normally and then importing this in order to create any custom tables.
+
 
 Regards,
 
